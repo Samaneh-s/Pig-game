@@ -1,0 +1,83 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+ }
+
+ body {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(135deg, #f8caff, #d7a6ff);
+   transition: background 0.5s ease;
+ }
+
+
+
+ .container {
+   text-align: center;
+   padding: 3rem 1rem;
+   background: rgba(255, 255, 255, 0.25);
+   backdrop-filter: blur(14px);
+   border-radius: 22px;
+   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+   transition: 0.5s;
+ }
+
+
+
+ h1 {
+   font-size: 3.5rem;
+   color: #702963;
+   margin-bottom: 1rem;
+ }
+
+
+
+ p {
+   font-size: 1.6rem;
+   color: #4a235a;
+   margin-bottom: 3rem;
+ }
+
+
+ /*  Dice Animation */
+ .dice {
+   width: 140px;
+   animation: floatDice 3s ease-in-out infinite;
+   filter: drop-shadow(0 1rem 1.5rem rgba(0, 0, 0, 0.3));
+ }
+
+ @keyframes floatDice {
+   0% {
+     transform: translateY(0) rotate(0deg);
+   }
+
+   50% {
+     transform: translateY(-18px) rotate(15deg);
+   }
+
+   100% {
+     transform: translateY(0) rotate(0deg);
+   }
+ }
+
+ /*Start Button*/
+ .start-btn {
+   padding: 1.4rem 3.8rem;
+   font-size: 2rem;
+   font-weight: bold;
+   border: none;
+   border-radius: 14px;
+   cursor: pointer;
+   background: linear-gradient(90deg, #ffce45, #ff8b4e);
+   color: #702963;
+   transition: 0.3s;
+ }
+
+ .start-btn:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 1.8rem 3.5rem rgba(0, 0, 0, 0.25);
+ }

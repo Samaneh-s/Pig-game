@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background: #E8B5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  width: 80rem;
+  max-width: 400rem;
+  height: 55rem;
+  backdrop-filter: blur(200px);
+  display: flex;
+  padding: 2rem;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0%;
+  padding-top: 4rem;
+  line-height: 16px;
+  word-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.score {
+  margin-top: 0;
+  font-size: 15rem;
+  font-weight: 400;
+  margin-bottom: 7rem;
+
+}
+
+.player--0 {
+  background-color: #702963;
+  color: #fff;
+  border-radius: 8px 0 0 8px;
+
+}
+
+.player--1 {
+  border-radius: 0 8px 8px 0;
+  background-color: #702963;
+  color: #fff;
+}
+
+.player--active {
+  background-color: #EF4880;
+}
+
+.player--active .name {
+  font-weight: 500;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+
+.current-label {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-score {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+
+  left: 50%;
+  border: none;
+  font-family: inherit;
+  font-size: 1.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.18s ease-out;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  position: absolute;
+  left: 50%;
+  top: 50rem;
+  height: 6rem;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 11;
+
+
+}
+
+.btn--new {
+  top: 2.8rem;
+  position: absolute;
+  left: 40%;
+}
+
+.btn--roll {
+  border-radius: 16px 0 0 16px;
+  width: 30rem;
+  background: #ffce45;
+  color: #EF4880;
+
+}
+
+.btn--hold {
+  border-radius: 0 16px 16px 0;
+  width: 30rem;
+  background: #ff8765;
+  color: #702963;
+
+}
+
+.btn--new:active {
+  transform: scale(0.92) translateY(4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn--roll:active {
+  transform: scale(0.92) translateY(4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn--hold:active {
+  transform: scale(0.94) rotate(-2deg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 13.4rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.hidden {
+  display: none;
+}
